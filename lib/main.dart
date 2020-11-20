@@ -28,22 +28,24 @@ class MyHomePage extends StatelessWidget {
         appBar: AppBar(
           title: Text('Personal Expenses'),
         ),
-        body: Column(
-          // mainAxisAlignment: MainAxisAlignment.spaceAround,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            Container(
-              width: double.infinity,
-              child: Card(
-                child: Text(
-                  'CHART!',
+        body: SingleChildScrollView(
+          child: Column(
+            // mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                width: double.infinity,
+                child: Card(
+                  child: Text(
+                    'CHART!',
+                  ),
+                  elevation: 10,
+                  color: Colors.blue,
                 ),
-                elevation: 10,
-                color: Colors.blue,
               ),
-            ),
-            UserTransaction(),
-          ],
+              UserTransaction(),
+            ],
+          ),
         ));
   }
 }
